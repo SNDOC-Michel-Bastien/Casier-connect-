@@ -2,13 +2,15 @@
 
 ## 📌 Description
 
-Ce projet vise à concevoir un **casier connecté** commandé via un **code PIN sécurisé** et la détection d’un **tag NFC**. Le système repose sur l’utilisation d’un **Raspberry Pi**, d’un **ESP32**, d’un **bus I²C**, et d’une **interface web responsive**.
+Ce projet vise à concevoir un **casier connecté** commandé via un **code PIN sécurisé** ou la détection d’un **tag NFC**. Le système repose sur l’utilisation d’un **Raspberry Pi**, d’un **ESP32**, d’un **bus I²C**, et d’une **interface web responsive**.
 
 Le système est conçu pour permettre :
 - L’identification d’un utilisateur via un tag NFC
 - L’ouverture d’un casier contrôlé par relais
 - La gestion du code PIN via une IHM
 - La communication sécurisée entre tous les modules via I²C et une API locale
+- L'utilisation d'une application mobile pour la gestion du compte
+- D'un abonnement pour l'utilisation d'une prise électrique
 
 ## 🧱 Structure du Projet
 
@@ -35,7 +37,7 @@ projet-casier-connecte/
 - 📡 Node.js (contrôle relais)
 - 📶 I²C (communication entre Raspberry Pi et ESP32)
 - 🌐 HTML / CSS / JavaScript (interface utilisateur)
-- 🧠 ESP32 (microcontrôleur pour la logique NFC et action du relais)
+- 🧠 ESP32 (microcontrôleur pour l'action des relais)
 - 🧰 Ngrok (exposition du serveur Flask pour l’accès mobile)
 - 🛠 Impression 3D (support mécanique de l’écran et du contrôleur)
 
