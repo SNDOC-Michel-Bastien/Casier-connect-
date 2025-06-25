@@ -18,12 +18,22 @@ Ce dépôt regroupe l’ensemble des fichiers et scripts nécessaires à la conc
 ### **1. Saisie du schéma structurel**
 
 *Exemple : carte Casier Connecté V1.0*
+
 <p align="center">
-  <img src="images/xxxxx.png" align=center width="400" height="300">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="images/schema structurel 1.png" width="300"><br>
+      </td>
+      <td align="center">
+        <img src="images/schema structurel 2.png" width="300"><br>
+      </td>
+    </tr>
+  </table>
 </p>
 
 
-### **2. Routage du circuit imprimé**
+### **2. Routage du circuit imprimé00**
 
 *Exemple : carte Casier Connecté V1.0*
 
@@ -66,7 +76,7 @@ Ce dépôt regroupe l’ensemble des fichiers et scripts nécessaires à la conc
 ### **3. Fabrication du circuit imprimé :**
 
 <p align="center">
- <img src="images/carte_espace_v1.5-view.png" align=center width="400" height="300">
+ <img src="images/Carte.png" align=center width="400" height="300">
 </p>
 
 
