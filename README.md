@@ -28,7 +28,7 @@ Ce dépôt regroupe l’ensemble des fichiers et scripts nécessaires à la conc
 *Exemple : carte Casier Connecté V1.0*
 
 <p align="center">
- <img src="images/xxxxx.png" align=center width="400" height="200">
+ <img src="images/Ares.png" align=center width="400" height="200">
 </p>
 
 > [!TIP]
