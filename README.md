@@ -43,57 +43,6 @@ projet-casier-connecte/
 
 ## 🛠 Installation
 
-1. **Cloner le projet**
-   ```bash
-   git clone https://github.com/ton-utilisateur/projet-casier-connecte.git
-   cd projet-casier-connecte
-   ```
-
-2. **Préparer la base de données SQLite**
-   ```bash
-   sqlite3 users.db
-   > CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT UNIQUE, password TEXT, pin TEXT);
-   > .exit
-   ```
-
-3. **Installer les dépendances Python**
-   ```bash
-   pip install flask flask-cors
-   ```
-
-4. **Installer Node.js (si ce n’est pas déjà fait)**
-   ```bash
-   cd relais-control
-   npm install
-   ```
-
-## ▶️ Lancement du projet
-
-Ouvrir plusieurs terminaux séparément :
-
-1. **Terminal 1 — Script d’envoi I²C (NFC)**
-   ```bash
-   cd ~/Desktop
-   python3 send_i2c.py
-   ```
-
-2. **Terminal 2 — Serveur Node.js (relais)**
-   ```bash
-   cd ~/relais-control
-   node server.js
-   ```
-
-3. **Terminal 3 — Serveur Flask**
-   ```bash
-   cd ~/Desktop/mon_site_web
-   python3 server.py
-   ```
-
-4. **Terminal 4 — Lancer ngrok pour accès distant**
-   ```bash
-   ngrok http 5000
-   ```
-
 ## 🔒 Authentification & Sécurité
 
 - Un utilisateur doit s’enregistrer avec un **nom, mot de passe et code PIN unique**
@@ -138,4 +87,4 @@ Le code complet est disponible et maintenu sur ce dépôt GitHub. N'hésitez pas
 
 ## 📬 Auteurs
 
-Projet réalisé par [ton nom ici] dans le cadre d’un projet de terminale ou BTS.
+Projet réalisé par MICHEL Bastien, BROUSSE Antoine, SAMA MOLA Soultane dans le cadre d’un projet de Licence Pro.
