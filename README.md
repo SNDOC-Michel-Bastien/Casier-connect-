@@ -20,7 +20,7 @@ Ce dépôt regroupe l’ensemble des fichiers et scripts nécessaires à la conc
 *Exemple : carte Casier Connecté V1.0*
 
 <p align="center">
-  <table>
+  <table align=center> 
     <tr>
       <td align="center">
         <img src="images/schema structurel 1.png" width="300"><br>
