@@ -161,13 +161,17 @@ Deux pièces ont été modélisées :
 > Les modèles sont pensés pour former un seul bloc compact, esthétique et facilement intégrable dans un environnement public.
 
 <p align="center">
- <img src="images/xxxxxx.png" align=center width="400" height="300">
+  <table align=center> 
+    <tr>
+      <td align="center">
+        <img src="images/support ecran.png" width="300"><br>
+      </td>
+      <td align="center">
+        <img src="images/Prise 3d.png" width="300"><br>
+      </td>
+    </tr>
+  </table>
 </p>
-
-<p align="center">
- <img src="images/xxxxx.png" align=center width="400" height="300">
-</p>
-
 
 ---
 
