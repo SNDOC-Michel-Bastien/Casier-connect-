@@ -23,10 +23,10 @@ Ce dépôt regroupe l’ensemble des fichiers et scripts nécessaires à la conc
   <table align=center> 
     <tr>
       <td align="center">
-        <img src="images/schema structurel 1.png" width="300"><br>
+        <img src="images/1.png" width="300"><br>
       </td>
       <td align="center">
-        <img src="images/schema structurel 2.png" width="300"><br>
+        <img src="images/2.png" width="300"><br>
       </td>
     </tr>
   </table>
