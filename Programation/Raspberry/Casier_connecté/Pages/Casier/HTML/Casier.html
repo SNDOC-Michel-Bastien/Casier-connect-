@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casier connecté</title>
+    <link rel="icon" type="image/png" href="../Image/Logo_maison-removebg-preview.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="retourete">
+            <a href="../../Principale/HTML/index.html">
+                <button class="menu-button">Menu principal</button>
+            </a>
+        </div>
+        <div class="top-right">
+            <button class="date-button">
+                <span id="dateHeure">Chargement...</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Porte ouverte</h1>
+        <div class="casier-grid">
+            <!-- Création des 12 casiers -->
+            <script>
+                for (let i = 1; i <= 12; i++) {
+                    document.write(`<div class="casier" id="casier${i}">${i}</div>`);
+                }
+            </script>
+        </div>
+
+        <div class="numero-casier">
+            <h2>Casier ouvert : <span id="numCasier">Aucun</span></h2>
+        </div>
+    </main>
+
+    <script src="../JAVA/script.js"></script>
+</body>
+</html>

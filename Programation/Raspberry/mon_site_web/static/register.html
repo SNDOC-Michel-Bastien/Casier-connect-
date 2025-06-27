@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0b7dda;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="register-box">
+  <h2>Créer un compte</h2>
+  <form id="registerForm">
+  	<input type="text" id="newUser" placeholder="Nom d'utilisateur" required>
+ 	 <input type="password" id="newPass" placeholder="Mot de passe" required>
+  	<input type="password" id="confirmPass" placeholder="Confirmer le mot de passe" required>
+  	<input type="text" id="pinCode" placeholder="Code PIN (4 chiffres)" maxlength="4" pattern="\d{4}" required>
+  	<button type="submit">S'inscrire</button>
+ 	 <div class="error" id="errorMsg"></div>
+  	<p style="text-align:center; margin-top:1rem;">
+    <a href="../">← Retour à la connexion</a>
+ 	 </p>
+</form>
+</div>
+
+<script>
+  const form = document.getElementById('registerForm');
+  const errorMsg = document.getElementById('errorMsg');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const user = document.getElementById('newUser').value;
+    const pass = document.getElementById('newPass').value;
+    const confirm = document.getElementById('confirmPass').value;
+    const pin = document.getElementById('pinCode').value;
+
+    if (pass !== confirm) {
+      errorMsg.textContent = "Les mots de passe ne correspondent pas.";
+      return;
+    }
+
+    if (!/^\d{4}$/.test(pin)) {
+      errorMsg.textContent = "Le code PIN doit contenir exactement 4 chiffres.";
+      return;
+    }
+
+    try {
+      const response = await fetch("/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: user, password: pass, pin: pin})
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("Compte créé avec succès !");
+        window.location.href = "../";
+      } else {
+        errorMsg.textContent = result.message || "Erreur inconnue.";
+      }
+    } catch (err) {
+      errorMsg.textContent = "Erreur de connexion au serveur.";
+    }
+  });
+</script>
+
+</body>
+</html>

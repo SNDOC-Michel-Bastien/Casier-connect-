@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableau de bord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .dashboard {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+     .error { color: red; margin-top: 0.5rem; }
+     .success { color: green; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+  <h2>Bienvenue</h2>
+  <p id="welcomeText">Chargement...</p>
+  <h3>Modifier mon code PIN</h3>
+  <form id="changePinForm">
+    <input type="password" id="newPin" placeholder="Nouveau code PIN (4 chiffres)" required pattern="\d{4}">
+    <button type="submit">Changer le code</button>
+    <div class="error" id="changePinError"></div>
+    <div class="success" id="changePinSuccess"></div>
+</form>
+</div>
+
+
+
+<script>
+  const SERVEUR_URL = prompt("https://mustang-sound-boxer.ngrok-free.app/");
+  // Récupérer le nom d'utilisateur depuis le localStorage (après login)
+  const username = localStorage.getItem("username");
+
+  if (!username) {
+    document.getElementById("welcomeText").textContent = "Utilisateur non connecté.";
+  } else {
+    fetch("https://mustang-sound-boxer.ngrok-free.app/me", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ username: username })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById("welcomeText").textContent =
+          `Bonjour ${data.username} !\nVotre code est : ${data.pin}`;
+      } else {
+        document.getElementById("welcomeText").textContent = "Utilisateur non trouvé.";
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById("welcomeText").textContent = "Erreur de connexion au serveur.";
+    });
+  }
+
+document.getElementById('changePinForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const newPin = document.getElementById('newPin').value;
+  const errorDiv = document.getElementById('changePinError');
+  const successDiv = document.getElementById('changePinSuccess');
+
+  errorDiv.textContent = "";
+  successDiv.textContent = "";
+
+  if (!/^\d{4}$/.test(newPin)) {
+    errorDiv.textContent = "Le code PIN doit contenir exactement 4 chiffres.";
+    return;
+  }
+
+  try {
+    const response = await fetch ("https://mustang-sound-boxer.ngrok-free.app/update-pin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include", // pour envoyer les cookies (session)
+      body: JSON.stringify({ newPin })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      successDiv.textContent = "Code PIN mis à jour avec succès.";
+    } else {
+      errorDiv.textContent = result.message || "Erreur lors du changement de code.";
+    }
+  } catch (err) {
+    errorDiv.textContent = "Erreur de connexion au serveur.";
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casier connecté</title>
+  <link rel="icon" type="image/png" href="../Image/Logo_maison-removebg-preview.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="menu-container">
+      <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+      <div class="menu-dropdown" id="menuDropdown">
+        <a href="../../Déposer/HTML/Déposer.html">Créer un compte</a>
+        <a href="../../Nous_contacter/HTML/Nous_Contacter.html">Nous contacter</a>
+      </div>
+    </div>
+
+    <div class="top-right">
+      <button class="date-button">
+        <span id="dateHeure">Chargement...</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Bienvenue</h1>
+    <h2>Que voulez-vous faire ?</h2>
+    <div class="button-group">
+      <a href="../../Déposer/HTML/Déposer.html">
+        <button class="action-button">
+          <img src="../../../Image/Deposer_colis.png" alt="Icône Déposer" class="icon">
+          Déposer
+        </button>
+      </a>
+      <a href="../../Récupérer/HTML/Récuperer.html">
+        <button class="action-button">
+          <img src="../../../Image/Récuperer_colis.png" alt="Icône Récupérer" class="icon">
+          Récupérer
+        </button>
+      </a>
+    </div>
+    <br>
+    <br>
+    <div class="assistance">
+      <a href="../../Nous_contacter/HTML/Nous_Contacter.html">
+         <button class="assistance-button">
+            <img src="../../../Image/assistance.png" alt="Icône Récupérer" class="icon-assist">
+            <br>
+            ASSISTANCE
+          </button>
+      </a>
+    </div>
+  </main>
+  <script src="../JAVA/script.js"></script> 
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' });
+    }
+  </script>
+</body>
+</html>

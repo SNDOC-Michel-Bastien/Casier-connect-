@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récuperer un colis</title>
+    <link rel="icon" type="image/png" href="../../../Image/Récuperer_colis.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="retourete">
+            <a href="../../Principale/HTML/index.html">
+                <button class="menu-button">Menu principal</button>
+            </a>
+        </div>
+        <div class="top-right">
+            <button class="date-button">
+              <span id="dateHeure">Chargement...</span>
+            </button>
+          </div>
+    </header>
+
+    <main>
+        <h1>Récuperer</h1>
+        <h5>Veuillez suivre les instructions ci-dessous pour récuperer vos affaires.</h5>
+
+        <div class="button-group">
+            <div class="button-container">
+                <h5>Entrez votre code :</h5>
+                <div class="digicode">
+                    <input type="password" id="digicodeInput" maxlength="4" readonly>
+                    <div class="keypad">
+                        <button onclick="enterDigit(1)">1</button>
+                        <button onclick="enterDigit(2)">2</button>
+                        <button onclick="enterDigit(3)">3</button>
+                        <button onclick="enterDigit(4)">4</button>
+                        <button onclick="enterDigit(5)">5</button>
+                        <button onclick="enterDigit(6)">6</button>
+                        <button onclick="enterDigit(7)">7</button>
+                        <button onclick="enterDigit(8)">8</button>
+                        <button onclick="enterDigit(9)">9</button>
+                        <button onclick="clearDigit()">❌</button>
+                        <button onclick="enterDigit(0)">0</button>
+                        <button onclick="validateCode()">✔️</button>
+                    </div>
+                </div>
+            </div>
+            <h5></h5>
+            <h5></h5>
+            <!-- Trait de séparation -->
+            <div class="separator"></div>
+    
+            <div class="button-container">
+                <button class="action-button">
+                    <img src="../../../Image/RFID.png" alt="QR code" class="icon">
+                </button>
+                <h5>Approchez votre carte d'accès à</h5><h5> l'endroit où la LED s'allume pour ouvrir l'accès !</h5>
+            </div>
+        </div>
+    </main>
+    <script src="../JAVA/script.js"></script> 
+</body>
+</html>

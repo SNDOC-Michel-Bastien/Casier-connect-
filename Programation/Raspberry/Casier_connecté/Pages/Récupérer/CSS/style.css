@@ -1,0 +1,203 @@
+/* Réinitialisation et boîtes */
+* {
+	cursor: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général */
+body {
+	cursor: none;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    width: 800px;
+    height: 480px;
+    user-select: none;
+}
+
+/* En-tête */
+header {
+	cursor: none;
+    display: flex;
+    justify-content: space-between; /* Sépare le menu et la date */
+    align-items: center;
+    padding: 10px;
+}
+
+/* Bouton Menu (à gauche) */
+.menu-button {
+	cursor: none;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Bouton Date / Heure (à droite) */
+.date-button {
+	cursor: none;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.date-button:hover,
+.menu-button:hover {
+	cursor: none;
+    background-color: #4cae4c;
+}
+
+/* Contenu principal */
+main {
+	cursor: none;
+    text-align: center;
+}
+
+h1 {
+	cursor: none;
+    font-size: 2.5rem;
+    color: #5A5A5A;
+    margin-bottom: 10px;
+}
+
+h4 {
+	cursor: none;
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+h5 {
+	cursor: none;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.instru-gauche{
+	cursor: none;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Groupe de boutons d'action */
+.button-group {
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.action-button {
+	cursor: none;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+	cursor: none;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+a {
+	cursor: none;
+    text-decoration: none;
+}
+
+.button-container {
+	cursor: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-container h5 {
+	cursor: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.separator {
+	cursor: none;
+    width: 2px; /* Épaisseur du trait */
+    height: 200px; /* Hauteur du trait */
+    background-color: #777; /* Couleur du trait */
+}
+
+.digicode {
+	cursor: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#digicodeInput {
+	cursor: none;
+    font-size: 24px;
+    text-align: center;
+    width: 120px;
+    padding: 5px;
+    border: 2px solid #5cb85c;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+}
+
+.keypad {
+	cursor: none;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+}
+
+.keypad button {
+	cursor: none;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.keypad button:hover {
+	cursor: none;
+    background-color: #4cae4c;
+}
+
+.keypad button:active {
+	cursor: none;
+    background-color: #398439;
+}

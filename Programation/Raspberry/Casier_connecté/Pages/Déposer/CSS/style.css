@@ -1,0 +1,136 @@
+/* Réinitialisation et boîtes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    width: 800px;
+    height: 480px;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between; /* Sépare le menu et la date */
+    align-items: center;
+    padding: 10px;
+}
+
+/* Bouton Menu (à gauche) */
+.menu-button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Bouton Date / Heure (à droite) */
+.date-button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.date-button:hover,
+.menu-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Contenu principal */
+main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #5A5A5A;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.instru-gauche{
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Groupe de boutons d'action */
+.button-group {
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.action-button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-container h5 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.separator {
+    width: 2px; /* Épaisseur du trait */
+    height: 200px; /* Hauteur du trait */
+    background-color: #777; /* Couleur du trait */
+}
