@@ -1,0 +1,17 @@
+Dans un premier temps ouvrir un terminal 
+cd Desktop
+python3 send_i2c.py (lance le programe python tag nfc)
+ouvire un nouveau terminal et pas fermer lancien 
+cd relais-control
+node server.js (lance le serveur)
+ouvrir un autre terminal 
+cd Desktop
+cd mon_site_webs 
+python3 server.py
+ouvrir un nouveau terminal
+ngrok http 5000
+
+ changer photo dans casier connecter / image par un nouveau QRcode
+ changer lien dans dashboard.html par url/me
+ 
+mode kiosque  
